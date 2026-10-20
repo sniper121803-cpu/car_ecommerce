@@ -1,0 +1,1803 @@
+/* Base Styles & Typography */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0d0d0d;
+    overflow-x: hidden;
+}
+
+/* Navbar Customizations */
+.tracking-wider {
+    letter-spacing: 2px;
+}
+
+.nav-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #e0e0e0 !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #b0adad !important;
+}
+
+.dropdown-chevron {
+    display: inline-block;
+    font-size: 0.7rem;
+    transform: rotate(90deg);
+    margin-left: 2px;
+}
+
+/* Contact Us Button in Navbar */
+.btn-contact {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-contact:hover {
+    background-color: #e6e6e6;
+    color: #000000;
+    transform: translateY(-1px);
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: calc(100vh - 80px);
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+/* Hero Background Image & Gradient Gradient Overlay */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Replace url below with your hypercar image path if local */
+    background-image: radial-gradient(circle at 70% 50%, rgba(0, 0, 0, 0.1) 0%, rgba(13, 13, 13, 0.85) 75%), 
+                      url('https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+/* Hero Content Typography */
+.subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5.5vw, 5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+/* Discover Button */
+.btn-discover {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 0;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    min-width: 220px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-discover:hover {
+    background-color: #f0f0f0;
+    color: #000000;
+    transform: translateY(-2px);
+}
+
+.arrow-icon {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* ===================================
+   Our Collections Section Styles
+================================ === */
+
+.our-collection {
+    width: 100%;
+    max-width: 1320px;       /* Restricts width so layout stays centered */
+    margin: 0 auto;
+    background-color: #ffffff; /* Clean white background */
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+
+/* Section Header Title */
+.collection-main-title {
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .collection-main-title {
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+    }
+}
+
+/* White Floating Card Container */
+.collection-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08); /* Soft drop shadow matching picture */
+    align-items: center;
+}
+
+@media (min-width: 992px) {
+    .collection-card {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 45px 50px;
+        gap: 50px;
+    }
+}
+
+/* -----------------------------------
+   Left Column Text Area
+----------------------------------- */
+.collection-content {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.collection-card-title {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #000000;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    line-height: 1.1;
+}
+
+.collection-description {
+    font-size: 0.95rem;
+    color: #333333;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+/* Pill-shaped Black Explore Button */
+.btn-explore-now {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 12px 32px;
+    border-radius: 50px; /* Pill shape matching reference */
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-explore-now:hover {
+    background-color: #222222;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* -----------------------------------
+   Right Column Image Area
+----------------------------------- */
+.collection-image-wrapper {
+    flex: 1.2;
+    width: 100%;
+    max-width: 580px;
+    height: 380px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.collection-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 12px;
+}
+
+@media (max-width: 991px) {
+    .collection-image-wrapper {
+        height: 300px;
+        max-width: 100%;
+    }
+}
+/* ===================================
+   Hypercars Section Styles
+================================ === */
+
+.hypercars {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff; /* Clean white card background */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); /* Soft elevated drop shadow */
+    padding: 30px;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Responsive Desktop Layout (Image Left, Content Right) */
+@media (min-width: 992px) {
+    .hypercars {
+        flex-direction: row;
+        padding: 50px 60px;
+    }
+}
+
+/* Left Image Styling */
+.hypercars-image-container {
+    flex: 1;
+    width: 100%;
+    max-width: 580px;
+}
+
+.hypercars-image {
+    width: 100%;
+    height: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+/* Right Content Styling */
+.hypercars-content {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hypercars-heading {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #000000;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hypercars-text {
+    font-size: 0.95rem;
+    color: #444444;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Black Pill Button Styling */
+.hypercars-btn {
+    display: inline-block;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.hypercars-btn:hover {
+    background-color: #333333;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* ===================================
+   Supercars Section Styles
+================================ === */
+
+.supercars {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff; /* Clean white card background */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); /* Soft elevated drop shadow */
+    padding: 30px;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Responsive Desktop Layout (Content Left, Image Right) */
+@media (min-width: 992px) {
+    .supercars {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 50px 60px;
+    }
+}
+
+/* Left Content Styling */
+.supercars-content {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.supercars-heading {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #000000;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.supercars-text {
+    font-size: 0.95rem;
+    color: #444444;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Black Pill Button Styling */
+.supercars-btn {
+    display: inline-block;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.supercars-btn:hover {
+    background-color: #333333;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Right Image Styling */
+.supercars-image-container {
+    flex: 1;
+    width: 100%;
+    max-width: 580px;
+}
+
+.supercars-image {
+    width: 100%;
+    height: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+/* ===================================
+   Featured Models Section Styles
+================================ === */
+
+.featured-models {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #ffffff; /* Clean white background */
+}
+
+/* Header Flex Layout */
+.featured-models-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.featured-models-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #000000;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.discover-all-link {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    letter-spacing: 1px;
+    transition: opacity 0.3s ease;
+}
+
+.discover-all-link:hover {
+    opacity: 0.7;
+    color: #000000;
+}
+
+/* Content Container */
+.featured-models-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.featured-car-wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 35px;
+}
+
+.featured-car-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Bottom Details */
+.featured-car-details {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.car-model-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.car-model-quote {
+    font-size: 1.05rem;
+    font-style: italic;
+    color: #555555;
+    margin-bottom: 30px; /* Spacing before the action buttons */
+    font-weight: 400;
+}
+
+/* Action Buttons Container Under Quote */
+.featured-model-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 35px;
+}
+
+/* Slate Grey Rectangular EXPLORE Button */
+.btn-explore-slate {
+    background-color: #92a4b3; /* Slate grey background color matching picture */
+    color: #ffffff;
+    padding: 14px 40px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-explore-slate:hover {
+    background-color: #7d90a0;
+    color: #ffffff;
+}
+
+.action-arrow {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* Visit Page Text Link */
+.btn-visit-page {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: opacity 0.2s ease;
+}
+
+.btn-visit-page:hover {
+    opacity: 0.7;
+    color: #000000;
+}
+
+/* ===================================
+   Find Dealer Section Styles
+================================ === */
+
+/* ===================================
+   Find Dealer Section Styles
+================================ === */
+
+.find-dealer {
+    width: 100%;
+    position: relative;
+    padding: 0; /* Removed padding so background fills completely */
+}
+
+/* Dealer Banner Wrapper - Fills Container Entirely */
+.dealer-banner {
+    width: 100%;
+    min-height: 420px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+}
+
+/* Background <img> Fills Entire Card */
+.dealer-banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+/* Gradient Overlay for Readability */
+.dealer-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.2) 100%);
+    z-index: 1;
+}
+
+/* Banner Content Layer */
+.banner-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.banner-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .banner-title {
+        font-size: 2.2rem;
+    }
+    .dealer-banner {
+        padding: 0 25px;
+        min-height: 320px;
+    }
+}
+
+/* White Action Button */
+.btn-find-dealer {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 12px 26px;
+    border-radius: 2px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-find-dealer:hover {
+    background-color: #e6e6e6;
+    color: #000000;
+}
+
+/* Carousel Control Arrows Positioned Floating at Bottom Center */
+.carousel-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 4px 14px;
+    z-index: 10;
+}
+
+.control-btn {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 2px 8px;
+    line-height: 1;
+    transition: opacity 0.2s ease;
+}
+
+.control-btn:hover {
+    opacity: 0.6;
+}
+
+.control-divider {
+    width: 1px;
+    height: 14px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 0 4px;
+}
+/* ===================================
+   Footer Section Styles
+================================ === */
+
+.footer {
+    background-color: #000000; /* Rich black background */
+    color: #ffffff;
+    padding: 60px 0 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Top subtle border line */
+}
+
+/* Top Bar Styling */
+.footer-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.footer-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.copyright-text {
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Divider Line */
+.footer-divider {
+    border: none;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 0 40px 0;
+}
+
+/* Content Grid Layout */
+.footer-content-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+}
+
+@media (min-width: 576px) {
+    .footer-content-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .footer-content-grid {
+        grid-template-columns: 1.2fr 1.2fr 1.2fr 1.8fr;
+    }
+}
+
+/* Column Links Styling */
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: opacity 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+/* Social Media Icons Grid */
+.social-column {
+    justify-content: flex-start;
+}
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 24px;
+    align-items: center;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 1.25rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+    opacity: 0.7;
+    transform: translateY(-2px);
+}
+
+/* ===================================
+   Main Combined About Section Styles
+================================ === */
+
+.about {
+    width: 100%;
+    background-color: #ffffff; /* Clean white background */
+    padding: 40px 20px;
+    color: #000000;
+}
+
+/* -----------------------------------
+   TOP PART: About Aurelia & Collage
+----------------------------------- */
+.about-top {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 120px;
+}
+
+@media (min-width: 992px) {
+    .about-top {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+    }
+}
+
+.about-content {
+    flex: 1;
+    max-width: 480px;
+}
+
+.about-back-link {
+    display: inline-block;
+    color: #333333;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    margin-bottom: 40px;
+    transition: opacity 0.2s ease;
+}
+
+.about-back-link:hover {
+    color: #000000;
+    opacity: 0.7;
+}
+
+.about-brand-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #000000;
+    margin-bottom: 30px;
+    line-height: 1;
+}
+
+.about-heading {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #000000;
+    margin-bottom: 18px;
+}
+
+.about-text {
+    font-size: 0.95rem;
+    color: #444444;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.about-quote-card {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 22px 28px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.about-quote {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #555555;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Tight Overlapping Collage Grid */
+.about-collage {
+    flex: 1.1;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.collage-item {
+    position: absolute;
+    overflow: hidden;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+.collage-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 1. Top Red Vintage Supercar */
+.item-red-car {
+    width: 190px;
+    height: 180px;
+    top: 0;
+    right: 60px;
+    z-index: 2;
+}
+
+/* 2. Middle-Left Grey AMG Car */
+.item-grey-car {
+    width: 200px;
+    height: 250px;
+    top: 60px;
+    left: 0;
+    z-index: 1;
+}
+
+/* 3. Center Front Classic Porsche Lineup */
+.item-porsche-fleet {
+    width: 200px;
+    height: 190px;
+    top: 135px;
+    left: 85px;
+    z-index: 5; /* Center image brought to front */
+}
+
+/* 4. Middle-Right Classic Porsche Side View */
+.item-classic-side {
+    width: 130px;
+    height: 230px;
+    top: 100px;
+    right: 0;
+    z-index: 3;
+}
+
+/* 5. Bottom-Right Bronze Alloy Wheel */
+.item-wheel {
+    width: 170px;
+    height: 120px;
+    bottom: 35px;
+    right: 0;
+    z-index: 4;
+}
+
+/* 6. Bottom Desk & Workspace */
+.item-desk {
+    width: 300px;
+    height: 70px;
+    bottom: 0;
+    left: 35px;
+    z-index: 2;
+}
+
+/* -----------------------------------
+   BOTTOM PART: Hear From Our Team
+----------------------------------- */
+.about-team-section {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.team-section-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #000000;
+    margin-bottom: 70px; /* Spacing for the overlapping top avatar badges */
+    letter-spacing: 0.5px;
+}
+
+/* 4-Column Responsive Grid */
+.team-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+}
+
+@media (min-width: 576px) {
+    .team-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .team-cards-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Staff Card Structure */
+.team-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 60px 20px 30px;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Circular Avatar Floating Halfway Above Card Top */
+.team-avatar-wrapper {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: -55px; /* Pulls top avatar above the card border */
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+}
+
+.team-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Staff Details Styling */
+.team-quote {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #666666;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.team-name {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #000000;
+    margin-bottom: 4px;
+}
+
+.team-role {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #777777;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ===================================
+   Main Combined Contact Section Styles
+================================ === */
+
+.contact {
+    width: 100%;
+    max-width: 1320px;       /* Restricts width so it doesn't stretch awkwardly across wide screens */
+    margin: 0 auto;          /* Centered layout */
+    background-color: #ffffff; /* Clean white background */
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    color: #000000;
+    box-sizing: border-box;
+}
+
+@media (min-width: 992px) {
+    .contact {
+        padding: 60px 40px;
+    }
+}
+
+/* -----------------------------------
+   PART 1: Top Customer Care Section
+----------------------------------- */
+.contact-top {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+@media (min-width: 992px) {
+    .contact-top {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 80px;
+    }
+}
+
+.contact-content {
+    flex: 1;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-back-link {
+    display: inline-block;
+    color: #333333;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    margin-bottom: 30px;
+    transition: opacity 0.2s ease;
+}
+
+.contact-back-link:hover {
+    color: #000000;
+    opacity: 0.7;
+}
+
+.contact-brand-title,
+.contact-main-heading {
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #000000;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.contact-brand-title {
+    margin-bottom: 5px;
+}
+
+.contact-main-heading {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 576px) {
+    .contact-brand-title,
+    .contact-main-heading {
+        font-size: 2.1rem;
+    }
+}
+
+.contact-description {
+    margin-bottom: 30px;
+}
+
+.contact-description p {
+    font-size: 0.95rem;
+    color: #333333;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    font-weight: 400;
+}
+
+.contact-description p:last-child {
+    margin-bottom: 0;
+}
+
+.btn-ask-question {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 14px 28px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ask-question:hover {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+.contact-image-wrapper {
+    flex: 1;
+    width: 100%;
+    max-width: 500px;
+    height: 480px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.contact-featured-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* -----------------------------------
+   PART 2: Make A Call & Support Form
+----------------------------------- */
+.contact-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 20px;
+}
+
+@media (min-width: 992px) {
+    .contact-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 80px;
+    }
+}
+
+/* Call Info Side */
+.call-info {
+    flex: 1;
+    max-width: 480px;
+}
+
+.call-title {
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.call-block {
+    margin-bottom: 35px;
+}
+
+.region-subtitle {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.call-block p {
+    font-size: 0.95rem;
+    color: #333333;
+    line-height: 1.4;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.phone-number {
+    font-weight: 700 !important;
+    margin-bottom: 8px !important;
+}
+
+/* Floating White Support Form Card */
+.support-form-card {
+    flex: 1;
+    max-width: 420px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 35px 30px 25px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.form-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #000000;
+    margin-bottom: 6px;
+}
+
+.form-subtitle {
+    font-size: 0.85rem;
+    color: #666666;
+    margin-bottom: 25px;
+}
+
+.support-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-row-2col {
+    display: flex;
+    gap: 12px;
+}
+
+.form-row-2col .form-group {
+    flex: 1;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    color: #444444;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    color: #000000;
+    border: 1px solid #777777;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus {
+    border-color: #000000;
+}
+
+.form-group input::placeholder {
+    color: #aaaaaa;
+}
+
+/* Black Continue Button */
+.btn-continue {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-continue:hover {
+    background-color: #222222;
+}
+
+/* Underlined Email Link */
+.support-email-link {
+    display: block;
+    text-align: center;
+    color: #000000;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: underline;
+    margin-top: 20px;
+    transition: opacity 0.2s ease;
+}
+
+.support-email-link:hover {
+    opacity: 0.7;
+    color: #000000;
+}
+
+/* ===================================
+   Contact / Dealer Locator Styles (Baguio City)
+================================ === */
+
+.contact {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px 20px;
+    color: #000000;
+    box-sizing: border-box;
+}
+
+/* Main Heading Title */
+.locator-main-title {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .locator-main-title {
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+    }
+}
+
+/* Combined Outer Card with Shadow */
+.dealer-locator-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
+}
+
+@media (min-width: 992px) {
+    .dealer-locator-card {
+        flex-direction: row;
+        min-height: 520px;
+    }
+}
+
+/* -----------------------------------
+   Left Sidebar: Filter & List Area
+----------------------------------- */
+.locator-sidebar {
+    width: 100%;
+    padding: 35px 30px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 992px) {
+    .locator-sidebar {
+        width: 380px;
+        flex-shrink: 0;
+    }
+}
+
+/* Showroom / Service Navigation Tabs */
+.locator-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tab-item {
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #444444;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.tab-item.active {
+    color: #000000;
+    font-weight: 700;
+}
+
+.tab-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+}
+
+/* Search Box Input */
+.search-box-wrapper {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 40px 12px 16px;
+    font-size: 0.9rem;
+    color: #333333;
+    border: 1px solid #444444;
+    border-radius: 2px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.search-input::placeholder {
+    color: #888888;
+}
+
+.search-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    color: #333333;
+    pointer-events: none;
+}
+
+/* "NEAR YOU" Header */
+.near-you-title {
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* Locations List */
+.locations-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.location-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid #222222;
+}
+
+.location-name {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #000000;
+}
+
+.expand-btn {
+    background: transparent;
+    border: 1px solid #888888;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    color: #444444;
+    cursor: pointer;
+    line-height: 1;
+    transition: all 0.2s ease;
+}
+
+.expand-btn:hover {
+    border-color: #000000;
+    color: #000000;
+}
+
+/* -----------------------------------
+   Right Dark Map Container
+----------------------------------- */
+.locator-map-wrapper {
+    flex: 1;
+    width: 100%;
+    min-height: 400px;
+    position: relative;
+    background-color: #2b2b2b;
+}
+
+.dark-map-canvas {
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+    position: relative;
+    background: 
+        radial-gradient(circle at 50% 40%, #3a3a3a 0%, #222222 100%),
+        linear-gradient(135deg, rgba(230, 160, 40, 0.35) 0%, transparent 60%);
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* Map Location Pins */
+.map-pin {
+    position: absolute;
+    width: 32px;
+    height: 42px;
+    cursor: pointer;
+    z-index: 5;
+    transition: transform 0.2s ease;
+}
+
+.map-pin:hover {
+    transform: scale(1.18);
+}
+
+.pin-icon {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z'/></svg>") no-repeat center / contain;
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z'/></svg>") no-repeat center / contain;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.5));
+}
+
+/* Baguio Specific Pin Placements */
+.pin-session {
+    top: 25%;
+    left: 48%;
+}
+
+.pin-johnhay {
+    top: 52%;
+    left: 68%;
+}
+
+.pin-marcos {
+    bottom: 22%;
+    left: 32%;
+}
+
+/* Map Footer Attribution */
+.map-attribution {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 12px;
+    box-sizing: border-box;
+    font-size: 0.75rem;
+    color: #cccccc;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.google-logo {
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+.map-data-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2px 6px;
+    border-radius: 2px;
+    font-size: 0.7rem;
+}
+
+/* ===================================
+   Navigation Hover Dropdown Styles
+================================ === */
+
+/* Enable Hover for Desktop Viewports */
+@media (min-width: 992px) {
+    .hover-dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0; /* Prevents gap between link and menu */
+    }
+}
+
+/* Custom Dropdown Menu Box Styling for White Backgrounds */
+.custom-dropdown {
+    background-color: #ffffff; /* Clean white background */
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    padding: 10px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Dropdown Links (Hypercars & Supercars) */
+.custom-dropdown .dropdown-item {
+    color: #111111; /* Dark visible text for white container */
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover state for menu options */
+.custom-dropdown .dropdown-item:hover {
+    background-color: #f0f0f0; /* Light grey hover highlight */
+    color: #000000;
+}
+
+/* ===================================
+   Collections Section Styles
+================================ === */
+
+.collections {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Top Centered Title */
+.collections-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 40px;
+}
+
+/* 3-Column Grid Layout */
+.collections-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+}
+
+@media (min-width: 768px) {
+    .collections-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .collections-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Card Outer Styling & Soft Drop Shadow */
+.collection-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collection-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Image Container */
+.card-image-wrapper {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Mint Green Color for Placeholders */
+.card-image-wrapper.placeholder-bg {
+    background-color: #a3f7e2;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Card Bottom White Section */
+.card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #ffffff;
+    flex-grow: 1;
+}
+
+/* Category Pill Badge */
+.category-badge {
+    display: inline-block;
+    background-color: #f3f3f3;
+    color: #555555;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+}
+
+/* Title / Description */
+.card-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #666666;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* Underlined Discover Link */
+.discover-link {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0d0d0d;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: opacity 0.2s ease;
+}
+
+.discover-link:hover {
+    opacity: 0.7;
+    color: #646464;
+}
